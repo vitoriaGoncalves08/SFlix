@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    background-image: url(../img/background.jpg);
+    background-image: cover;
+    background-repeat: repeat-y;
+    width: 100%;
+}
+
+.container::before {
+    content: '';
+    background-color: rgb(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.title{
+    color: #ececec;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #e50914;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: -15px;
+}
+
+.logo img {
+    height: 45px;
+    width: 167px;
+}
+
+.header {
+    padding: 15px 0px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.75);
+    margin-bottom: 2rem;
+    justify-content: space-around;
+}
+.menu {
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+}
+.menu li a{
+    text-decoration: none;
+    color: #ececec;
+    font-weight: 500;
+    margin-right: 2rem;
+    font-size: large;
+}
+.menu li a:hover{
+    color: #333;
+}
+
+.form {
+    padding: 60px;
+    position: relative;
+    max-width: 55vh;
+    margin-left: 50%;
+    background-color: rgb(0, 0, 0, 0.75);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+}
+
+.form h2 {
+    font-size: 32px;
+    color: #ececec;
+    margin-top: 0;
+}
+
+.form .input-item {
+    height: 50px;
+    width: 100%;
+    color: #ececec;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-sizing: border-box; 
+    margin-top: 1rem;
+}
+
+.form .input-item:hover {
+    background-color: #444;
+}
+
+.form textarea {
+    height: 90px;
+    width: 100%;
+    color: #ececec;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0.7rem;
+    margin-top: 1rem;
+}
+
+.form textarea:hover {
+    background-color: #444;
+}
+.form .continue-button input {
+    margin-top: 1rem;
+    height: 50px;
+    width: 100%;
+    color: #ececec;
+    background-color: #e50914;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form .continue-button input:hover {
+    background-color: #fc1722;
+    cursor: pointer;
+}
+
+/* -------------------------------------------- */
+
+.table_body {
+    width: 85%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #ececec;
+
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+thead th {
+    position: sticky;   
+    top: 0;
+    left: 0;
+    background-color: #32323e;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #ececec;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #e4e4e4 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+.titulo_registros{
+    color:#838383;
+    font-size: 26px; 
+    font-weight: 500;
+    margin: 1rem
+}
